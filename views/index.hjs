@@ -12,6 +12,9 @@
       <input type="text" id="said" />
     </div>
 
+    <div id="messages">
+    </div>
+
     <script type="text/javascript" src="/javascripts/main.js"></script>
   </body>
 </html>
