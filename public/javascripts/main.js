@@ -21,6 +21,7 @@ function openSocket () {
 
   ws.onclose = function () {
     console.log("close");
+    retryInterval && clearInterval(retryInterval);
     retryInterval = setInterval(openSocket, retryEveryMS);
   }
 
