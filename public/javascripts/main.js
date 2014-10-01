@@ -19,7 +19,7 @@ window.onunload = function () {
   ws.close();
 }
 
-d.body.onclick = function (event) {
+inputField.onkeydown = function (event) {
   console.log("ws", ws);
   ws.send(JSON.stringify({message: inputField.value}));
 }
