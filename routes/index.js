@@ -1,9 +1,11 @@
-var express = require('express');
-var router = express.Router();
+var express = require('express')
+  , bodyParser = require('body-parser')
+  , router = express.Router()
+  ;
 
-/* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'The Universe' });
+  res.render('index', { title: 'WhatSay' });
 });
+
 
 module.exports = router;
