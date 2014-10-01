@@ -6,7 +6,18 @@ var d = window.document
   , retryInterval
   , retryEveryMS = 1000;
 
+function destroySocket () {
+  if (!ws) {
+    return;
+  }
+  ws.onopen = undefined;
+  ws.onclose = undefined;
+  ws.onmessage = undefined;
+}
+
 function openSocket () {
+  destroySocket();
+
   ws = new WebSocket("ws://localhost:8080/");
 
   ws.onopen = function () {
